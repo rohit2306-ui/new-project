@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Search</title>
+    <link rel="icon" type="image/x-icon" href="icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <img style="height: 60px; border-radius: 20px" src="logo.png" alt="" />
+      <nav>
+        <button onclick="redirectToCategory('Business')">Business</button>
+        <button onclick="redirectToCategory('Science')">Science</button>
+        <button onclick="redirectToCategory('Literature')">Literature</button>
+        <button id="seeall">See all Types...</button>
+        <section id="book-categories" class="show">
+            <button onclick="redirectToCategory('Math')">Math</button>
+            <button onclick="redirectToCategory('History')">History</button>
+            <button onclick="redirectToCategory('Technology')">Technology</button>
+            <button onclick="redirectToCategory('Engineering')">Engineering</button>
+            <button onclick="redirectToCategory('Medicine')">Medicine</button>
+            <button onclick="redirectToCategory('Education')">Education</button>
+            <button onclick="redirectToCategory('Art')">Art</button>
+            <button onclick="redirectToCategory('Philosophy')">Philosophy</button>
+            <button onclick="redirectToCategory('Psychology')">Psychology</button>
+            <button onclick="redirectToCategory('Economics')">Economics</button>
+            <button onclick="redirectToCategory('Literature')">Literature</button>
+            <button onclick="redirectToCategory('Politics')">Politics</button>
+            <button onclick="redirectToCategory('Biography')">Biography</button>
+            <button onclick="redirectToCategory('Religion')">Religion</button>
+            <button onclick="redirectToCategory('Law')">Law</button>
+            <button onclick="redirectToCategory('Music')">Music</button>
+            <button onclick="redirectToCategory('Sports')">Sports</button>
+            <button onclick="redirectToCategory('Travel')">Travel</button>
+            <button onclick="redirectToCategory('Science Fiction')">
+              Science Fiction
+            </button>
+            <button onclick="redirectToCategory('Fantasy')">Fantasy</button>
+            <button onclick="redirectToCategory('Romance')">Romance</button>
+          </section>
+      </nav>
+    </header>
+    <main>
+      <section id="search">
+        <input type="text" id="searchInput" placeholder="Search for books..." />
+        <button onclick="searchBooks()">Search</button>
+      </section>
+      <section id="results2" style="justify-content: center">
+        <h2>Featured Books</h2>
+        <div
+          id="featured-books-list"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            color: rgb(215, 210, 210);
+          "
+        ></div>
+      </section>
+    </main>
+
+    <footer>
+      <h1 style="color: white">library4all</h1>
+      <h1 style="color: white">By Rohit Thakur</h1>
+      <p>&copy; 2024 Library4all. All rights reserved. By Rohit Thakur</p>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>
+<script>
+    let see = document.querySelector("#seeall")
+    let gotit = document.querySelector("#book-categories")
+    see.onclick = ()=>{
+        gotit.classList.toggle("active")
+    }
+</script>
